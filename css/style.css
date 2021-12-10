@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(https://images.pexels.com/photos/1416530/pexels-photo-1416530.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 20px;
+    
+}
+.form_control{
+    margin: 10px 0;
+    display: block;
+}
+small{
+    padding-left: 30px;
+    visibility: hidden;
+}
+input{
+    padding: 8px 60px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    
+}
+label{
+    color: #ffffff;
+}
+.btn{
+    width: 140px;
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 16px;
+    border:none;
+    outline: none;
+    background-color: chartreuse;
+}
+.form h1{
+    color: #ffffff;
+}

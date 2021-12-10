@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="form_box" id="form">
+		<form class="form">
+			<h1 class="text-center">Registatrion form</h1>
+
+			<div class="form_control">
+				<label>username</label>	<br>
+				<input autocomplete="off" type="text" name="username"id="username" placeholder="Enter the username">
+				<br>
+				<small>error msg</small>
+			</div>
+			<div class="form_control">
+				<label>phone no</label>	<br>
+				<input autocomplete="off" type="text" name="phone"id="phone" placeholder="Enter the phone no">
+				
+				<br><small>error msg</small>
+			</div>
+			<div class="form_control">
+				<label>email</label>	<br>
+				<input autocomplete="off" type="email" name="email"id="email" placeholder="Enter username email">
+				<br><small>error msg</small>
+			</div>
+			<div class="form_control">
+				<label>password</label>	<br>
+				<input autocomplete="off" type="text" name="password"id="password" placeholder="Enter username password">
+				<br><small>error msg</small>
+			</div>
+			<div class="form_control">
+				<label>password</label>	<br>
+				<input autocomplete="off" type="text" name="cpassword"id="cpassword" placeholder="Repeate password">
+				<br><small>error msg</small>
+			</div>
+			<input type="submit" class="btn"name="submit"value="submit">submit</input> 
+			
+			
+	
+		</form>
+	</div>
+	<script>
+           const form=document.getElementById('form');
+		   const username=document.getElementById('username');
+		   const phone=document.getElementById('phone');
+		   const email=document.getElementById('email');
+		   const password=document.getElementById('password');
+		   const cpassword=document.getElementById('cpassword');
+
+		   form.addEventListener('submit',(e)=>{
+			   e.preventDefault();
+			   const usernameval=username.value;
+		   const phoneval=phone.value;
+		   const emailval=email.value;
+		   const passwordval=password.value;
+		   const cpasswordval=cpassword.value;
+
+		   validate();
+		   
+
+		   })
+
+		   const validate=()=>{
+			   if(usernameval==""){
+				   setErrorMsg(username,"plz fill yhe username");
+			   }else if(usernameval<=2){
+				setErrorMsg(username,"reuired length minmum 3");
+			   }else{
+				   setSuccessMas(username);
+			   }
+		   }
+
+
+		   const  setErrorMsg=(input,errormag)=>{
+                      const formcon= input.parentElement;
+					  console.log(formcon);
+		   }
+
+	</script>
+	
+
+
+
+</body>
+</html>
